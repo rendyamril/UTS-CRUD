@@ -7,7 +7,6 @@ if (isset($_POST['login'])) {
     $password = $_POST['password'];
     $status = $_POST['status'];
 
-    // Cek apakah data ada di gudang database
     $cek = mysqli_query($koneksi, "SELECT * FROM users WHERE username='$username' AND password='$password' AND status='$status'");
     
     if (mysqli_num_rows($cek) > 0) {
